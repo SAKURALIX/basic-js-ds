@@ -54,18 +54,18 @@ class BinarySearchTree {
   }
 
   has(data) {
-    if(!this.roots) return null;
-    let current = this.root;
-    const rnLoop = true;
-    while(rnLoop) {
-      if(!current) return false;
-      if(data === current.data) return true;
-      if(data < current.data) {
-        current === current.left;
-      } else {
-        current === current.right;
-      }
-    }
+    // if(!this.roots) return null;
+    // let current = this.root;
+    // const rnLoop = true;
+    // while(rnLoop) {
+    //   if(!current) return false;
+    //   if(data === current.data) return true;
+    //   if(data < current.data) {
+    //     current === current.left;
+    //   } else {
+    //     current === current.right;
+    //   }
+    // }
   }
 
   find(/* data */) {
