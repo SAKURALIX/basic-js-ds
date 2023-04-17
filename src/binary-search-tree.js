@@ -54,23 +54,31 @@ class BinarySearchTree {
   }
 
   has(data) {
-    // if(!this.roots) return null;
-    // let current = this.root;
-    // const rnLoop = true;
-    // while(rnLoop) {
-    //   if(!current) return false;
-    //   if(data === current.data) return true;
-    //   if(data < current.data) {
-    //     current === current.left;
-    //   } else {
-    //     current === current.right;
-    //   }
-    // }
+    let node = this.roots;
+    while(node != null) {
+      if(node.data === data) {
+        return true;
+      } else if(data < node.data) {
+        node = node.left;
+      } else {
+        node = node.right;
+      }
+    }
+    return false;
   }
 
-  find(/* data */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  find(data) {
+      let node = this.roots;
+      while(node != null) {
+        if(node.data === data) {
+          return node;
+        } else if(data < node.data) {
+          node = node.left;
+        } else {
+          node = node.right;
+        }
+      }
+      return null;
   }
 
   remove(/* data */) {
